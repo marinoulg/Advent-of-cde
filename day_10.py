@@ -201,10 +201,14 @@ def answer_part1(perms):
 
 if __name__ == '__main__':
     lines = get_data('data/example4-day-10.txt')[:-1]
+    print('lines OK')
     columns = get_columns(lines)
+    print('columns OK')
     char_per_line = len('89010123')
     cw = create_crossword(columns, char_per_line)
+    print('cw OK')
     cw = converting_to_integers(cw)
-    perms = get_all_permutations(cw)
-    print(f'there are {perms} permutations possible overall')
+    print('cw 2 OK')
+    # perms = get_all_permutations(cw)
+    # print(f'there are {perms} permutations possible overall')
     # print(answer_part1(perms))
