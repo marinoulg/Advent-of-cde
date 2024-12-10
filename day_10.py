@@ -209,6 +209,6 @@ if __name__ == '__main__':
     print('cw OK')
     cw = converting_to_integers(cw)
     print('cw 2 OK')
-    # perms = get_all_permutations(cw)
-    # print(f'there are {perms} permutations possible overall')
+    perms = get_all_permutations(cw)
+    print(f'there are {perms} permutations possible overall')
     # print(answer_part1(perms))
