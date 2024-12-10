@@ -177,3 +177,11 @@ def final_result_part_one(final_result):
     keys = np.array(list(new_dict.keys()))
     df = pd.DataFrame([keys,values]).T
     return np.sum(keys*values)
+
+if __name__ == '__main__':
+    data = get_data()
+    free_space_dots, files = get_free_space_and_files(data)
+    df, new_string = get_new_string(free_space_dots, files)
+    my_list = get_my_list_not_new_string(df)
+    output_list = get_output_list(my_list)
+    print(get_answer_part_one(output_list))
