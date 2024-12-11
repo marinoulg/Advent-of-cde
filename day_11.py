@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 
 def get_stones(path):
     data = open(path, 'r').read()
@@ -33,6 +34,9 @@ def get_new_stones(stones):
 
 
 if __name__ == '__main__':
+    a = (time.time())
+    print(time.ctime(a))
+    print(a)
     path = 'data/day-11.txt'
     stones = get_stones(path)
     print(stones)
@@ -43,4 +47,8 @@ if __name__ == '__main__':
         new_stones = get_new_stones(new_stones)
         # print(new_stones)
 
-    print(len(new_stones))
+        print('length is', len(new_stones))
+    # print(time.time())
+        b = ((time.time()))
+        # print(time.ctime(b))
+        print('time taken until now is', b-a, 'seconds')
