@@ -202,16 +202,17 @@ def get_final_list(A,B,C,program):
 def final_result(outputs):
     return (",".join(map(str, outputs)))
 
-def part_2(program, rang=1000000, B=0, C=0):
+def part_2(program, min=0, max=1000000, B=0, C=0):
     str_progr = str(program).replace('[', '').replace(']', '').replace(' ', '')
 
-    for i in range(rang):
+    for i in range(min, max):
         result = get_final_list(1+i, B, C, program)
         if (final_result(result)) != str_progr:
+            print('❓ i=',i)
             next
         else:
             print(1+i)
             break
 
 if __name__ == '__main__':
-    part_2(program=[2,4,1,7,7,5,1,7,0,3,4,1,5,5,3,0])
+    part_2(program=[2,4,1,7,7,5,1,7,0,3,4,1,5,5,3,0], min=1000000, max=10000000)
